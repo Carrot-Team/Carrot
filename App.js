@@ -12,6 +12,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fabdfc',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
 });
