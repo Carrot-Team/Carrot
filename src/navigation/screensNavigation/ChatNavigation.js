@@ -7,25 +7,28 @@ import { THEME } from '../../theme'
 const ChatStack = createStackNavigator()
 
 export const ChatStackScreen = () => {
+	const screenOptions = {
+		headerStyle: {
+			backgroundColor: THEME.COMPONENT_BACKGROUND_COLOR,
+			shadowColor: 'transparent',
+		},
+		headerRight: () => (
+			<Button
+				onPress={() => alert('This is a button!')}
+				title='Info'
+				color='#439d'
+			/>
+		),
+		headerTintColor: THEME.TEXT_COLOR,
+	}
 
-    const screenOptions = {
-        headerStyle: {
-            backgroundColor: THEME.COMPONENT_BACKGROUND_COLOR,
-            shadowColor: 'transparent',
-        },
-        headerRight: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="Info"
-              color='#42AACC'
-            />
-        ),
-        headerTintColor: THEME.TEXT_COLOR
-    }
-    
-    return (
-        <ChatStack.Navigator initialRouteName="Chat" >
-            <ChatStack.Screen name="Chat" component={ChatScreen} options={screenOptions} />
-        </ChatStack.Navigator>
-    )
+	return (
+		<ChatStack.Navigator initialRouteName='Chat'>
+			<ChatStack.Screen
+				name='Chat'
+				component={ChatScreen}
+				options={screenOptions}
+			/>
+		</ChatStack.Navigator>
+	)
 }
