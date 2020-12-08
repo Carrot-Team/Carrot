@@ -10,7 +10,7 @@ export const RatingScreen = () => {
 
     return <View style={styles.center}>
         <Text >RatingScreen</Text>
-        <Button title='Go' onPress={() => {navigation.navigate('Chat')}} />
+        <Button title='Enter' onPress={() => {navigation.navigate('Chat')}} />
     </View>
     
     
